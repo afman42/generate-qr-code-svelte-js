@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+label {
+  font-size: 14px;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f1f0e8;
+}
+
+.container {
+  margin: 50px auto;
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.input {
+  width: 100%;
+  height: 2rem;
+  border: none;
+  border-radius: 2px;
+  padding: 5px 5px;
+}
+
+.input,
+div {
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 5px auto;
+    width: 100%;
+    padding: 0px 10px;
+  }
+  .qrcode {
+    display: flex;
+    justify-content: center;
+  }
+}

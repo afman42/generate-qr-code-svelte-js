@@ -1,7 +1,6 @@
 <script>
-import "./app.css";
 import QRCode from "qrcode";
-import { onMount, tick} from "svelte"
+import { tick} from "svelte"
 
 let inputEl;
 let qrCode = {
@@ -55,7 +54,7 @@ qr_code(qrCode)
 
 function generate(e){
   e.preventDefault();
-  if(qrCode.name != "" && qrCode.width > 0) {
+  if(qrCode.name != "" && qrCode.width > 0 && qrCode.margin > 0) {
     qr_code(qrCode)
     inputEl.children[0].remove()
   }else{
@@ -124,7 +123,11 @@ function generate(e){
         <input type="number" class="input" min="0" bind:value={qrCode.width} id="width"/>
       </div>
       <div>
-        <button type="button" on:click={download}>click</button>
+        <label for="margin">margin</label>
+        <input type="number" class="input" min="0" bind:value={qrCode.margin} id="margin"/>
+      </div>
+      <div>
+        <button type="button" on:click={download}>download</button>
         <button type="submit">generate</button>
       </div>
   </div>

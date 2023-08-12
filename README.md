@@ -1,3 +1,3 @@
 # Svelte + Vite
 
-Generete Web Page
+Generete QR Code Web Page
